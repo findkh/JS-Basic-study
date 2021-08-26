@@ -3,7 +3,7 @@ public class Ex4_8 {
 
 	public static void main(String[] args) {
 		int menu = 0;
-		int num = 0;
+		int num = 0; 
 		
 		Scanner scanner = new Scanner(System.in);
 		
