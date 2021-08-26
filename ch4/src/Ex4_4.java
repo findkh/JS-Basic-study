@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Ex4_4 {
 	public static void main(String[] args) {
+		//switch문사용
 		System.out.print("현재의 월을 입력하세요>");
 		
 		Scanner scanner = new Scanner(System.in);
