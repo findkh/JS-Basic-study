@@ -24,9 +24,6 @@ public class Ex4_4 {
 				break;
 			default:
 				System.out.println("현재의 계절은 겨울입니다.");
-				
 		}
-
 	}
-
 }
