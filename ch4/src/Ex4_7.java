@@ -17,10 +17,9 @@ public class Ex4_7 {
 				System.out.println("더 작은 값을 입력하세요");
 			}else if(input < answer) {
 				System.out.println("더 큰 값을 입력하세요");
-		}
+			}			
+		 } while(input!=answer);
 			
-		} while(input!=answer);
-		System.out.println("정답입니다");
-		
-	}
+			System.out.println("정답입니다");
+		}
 }
