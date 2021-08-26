@@ -1,12 +1,12 @@
 import java.util.*;
+
 public class Ex4_8 {
 
 	public static void main(String[] args) {
-		int menu = 0;
-		int num = 0; 
-		
+		int menu = 0, num = 0; 
 		Scanner scanner = new Scanner(System.in);
 		
+		outer:
 		while(true) {
 			System.out.println("(1) square");
 			System.out.println("(2) square root");
@@ -23,7 +23,28 @@ public class Ex4_8 {
 				System.out.println("메뉴를 잘못 선택하셨습니다(종료:0)");
 				continue;
 			}
-		System.out.println("선택하신 메뉴는 "+ menu +"번입니다");
-		}
+			
+			for(;;) {
+				System.out.println("계산할 값을 입력하세요(계산 종료: 0, 전체종료: 99)>");
+				tmp = scanner.nextLine();
+				num = Integer.parseInt(tmp);
+				
+				if(num==0)
+					break;
+				if(num==99)
+					break outer;
+				
+				switch(menu) {
+					case 1:
+						System.out.println("result=" + num*num);
+					case 2:
+						System.out.println("result=" + Math.sqrt(num));
+					case 3:
+						System.out.println("result=" + Math.log(num));
+						break;
+				}
+			}
 	}
-}
+	System.out.println("프로그램이 종료되었습니다");
+	}
+	}
