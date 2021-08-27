@@ -7,8 +7,7 @@ public class Exercise4_10 {
 		int count = 0;
 		
 		java.util.Scanner s = new java.util.Scanner(System.in);
-		
-		System.out.println(answer);
+				
 		do {
 			count++;
 			System.out.print("1과 100사이의 값을 입력하세요 :");
@@ -23,10 +22,6 @@ public class Exercise4_10 {
 				System.out.println("시도횟수"+count);
 				break;
 			}
-			
-			
-		} while(true);
-
-	}
-
+			} while(true);
+		}
 }
