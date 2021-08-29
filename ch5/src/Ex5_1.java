@@ -22,7 +22,7 @@ public class Ex5_1 {
 			
 			System.out.println();
 		
-			System.out.println(Arrays.toString(iArr2));
+			System.out.println(Arrays.toString(iArr2)); //배열의 모든 요소들을 확인할 수 있다
 			System.out.println(Arrays.toString(iArr3));
 			System.out.println(Arrays.toString(chArr));
 			System.out.println(iArr3);
