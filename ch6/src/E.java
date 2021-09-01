@@ -15,7 +15,7 @@ public class E {
 		avg2 = i/3f;                         //78.333334
 		avg3 = i/3f*10;                      //786.6666
 		avg4 = i/3f*10+0.5f;                 //787.1666
-		avg5 = (int)(i/3f*10+0.5f);          
+		avg5 = (int)(i/3f*10+0.5f);          //787.0
 		avg6 = (int)(i/3f*10+0.5f)/10f;      //78.7
 		
 		System.out.println(avg1);
@@ -24,6 +24,5 @@ public class E {
 		System.out.println(avg4);
 		System.out.println(avg5);
 		System.out.println(avg6);
-
 	}
 }

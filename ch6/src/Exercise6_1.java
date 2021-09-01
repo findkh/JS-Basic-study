@@ -15,8 +15,6 @@ public class Exercise6_1 {
 }
 
 class Student{ 
-	Student(){} //기본생성자 형식 : 클래스이름(){}
-	
 	//맴버변수 타입 정의 
 	String name;
 	int ban;
@@ -24,6 +22,8 @@ class Student{
 	int kor;
 	int eng;
 	int math;		
+	
+	Student(){} //기본생성자 형식 : 클래스이름(){}
 	
 	Student(String name, int ban, int no, int kor, int eng, int math){
 		//this.name은 인스턴스변수 , name은 지역변수
