@@ -16,7 +16,6 @@ class SmartTv extends Tv{ //자식 멤버 2개 + 부모 멤버5개 총 7개
 	}
 }
 
-
 public class Ex7_1 {
 	public static void main(String[] args) {
 		SmartTv stv = new SmartTv();
@@ -26,7 +25,5 @@ public class Ex7_1 {
 		stv.displayCaption("Hello, world");
 		stv.caption = true;
 		stv.displayCaption("Hello, world");
-
 	}
-
 }

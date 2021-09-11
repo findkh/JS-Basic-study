@@ -7,7 +7,6 @@ abstract class Unit2{
 interface Fightable{
 	void move(int x, int y); //public abstract 생략됨
 	void attack(Fightable f);//public abstract 생략됨
-	
 }
 
 class Fighter extends Unit2 implements Fightable{
@@ -18,19 +17,16 @@ class Fighter extends Unit2 implements Fightable{
 	public void attack(Fightable f) {
 		System.out.println(f+"를 공격");
 	}
-
 }
 
 public class FighterTest {
 	public static void main(String[] args) {
 		Fightable f = new Fighter(); 
-
 		
 		Unit2 u = new Fighter(); 
 		u.move(100, 200);
 //		u.attack(New Fighter()); //Unit2에는 attack()이 없어서 호출불가
 		u.stop();
-		
 		
 		f.move(100, 200);
 		f.attack(new Fighter());

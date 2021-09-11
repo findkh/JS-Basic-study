@@ -3,7 +3,7 @@ class SutdaDeck{
 	SutdaCard[] cards = new SutdaCard[CARD_NUM];
 	
 	SutdaDeck() {
-		
+	//내용 입력
 	}
 }
 

@@ -10,5 +10,4 @@ public class Exercise6_21 {
 		value = -10;
 		System.out.println(value + "의 절댓값 : " + abs(value));
 	}
-
 }
