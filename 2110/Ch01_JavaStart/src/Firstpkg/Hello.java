@@ -2,7 +2,7 @@ package Firstpkg;
 class Hello {
 	public static void main(String[] args) {
 		
-		System.out.println("@");
+		System.out.println("@1");
 		System.out.println("안녕");
 		System.out.println('A');
 		System.out.println('a'+'b');
