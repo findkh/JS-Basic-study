@@ -16,7 +16,7 @@ public class Ex01_WhileSample {
 			n++;
 		}
 		System.out.println("입력된 수의 개수는" + n + "개" + "평균은 " + sum/n + "입니다");
-
+		rd.close();
 	}
 
 }
