@@ -7,7 +7,6 @@ package Review211101;
 //	}
 //}
 
-
 public class Ex09_ConstructorDemo {
 	public Ex09_ConstructorDemo(){} //기본생성자
 	public Ex09_ConstructorDemo(int param1) {}

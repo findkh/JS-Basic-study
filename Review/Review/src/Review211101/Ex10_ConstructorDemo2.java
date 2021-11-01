@@ -18,7 +18,7 @@ class Calculator{
 		System.out.println((this.left+this.right)/2);
 	}
 }
-
+ 
 class SubstractionalbeCalculator extends Calculator{
 //	부모 클래스의 기본 생성자를 자동으로 호출함
     public SubstractionalbeCalculator(int left, int right) {
