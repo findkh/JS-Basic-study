@@ -17,5 +17,4 @@ public class Ex04_Scope5 {
 		c1.m();
 //		출력값: 20 
 	}
-
 }
