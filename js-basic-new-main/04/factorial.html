@@ -9,5 +9,35 @@
 </head>
 <body>
 
+<script>
+	var n = prompt("숫자를 입력하세요", "10");
+	// var nFact = 1;
+	// var i =2;
+	// while(i <= n){
+	// 	nFact *= i;
+	// 	i++;
+	// }
+	//document.write('while문'+ n + "!= " + nFact);
+
+	// while(i <= n){
+	// 	nFact *= i++;
+	// }
+	//증감연산자 붙여서 코드 줄이기
+	
+	// var nFact = 1;
+	// var i =2;
+	// do{
+	// 	nFact *= i;
+	// 	i++
+	// }while(i <= n)
+	// document.write('do while문'+ n + "!= " + nFact);
+
+	var nFact = 1;
+	for(var i=2; i <= n; i++){
+		nFact *= i;
+	}
+	document.write('for문'+ n + "!= " + nFact);
+</script>
+
 </body>
 </html>
