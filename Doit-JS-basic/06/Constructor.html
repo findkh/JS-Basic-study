@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function Book(author, pages, price, title) {
+        this.author = author;
+        this.pages = pages;
+        this.price = price;
+        this.title = title;
+    };
+
+    sudalBook = new Book("수달", 300, 20000, "수달의 개발일기");
+    console.log(sudalBook);
+    console.log(sudalBook.title);
+
+    hafaBook = new Book("하파", 100, 10000, "하파포토집");
+    console.log(hafaBook.pages);
+
+</script>
+</body>
+</html>
