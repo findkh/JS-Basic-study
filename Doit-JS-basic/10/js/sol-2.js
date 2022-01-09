@@ -7,3 +7,6 @@
     }
 
     changeBg();
+
+         
+  window.onload = openPop;
