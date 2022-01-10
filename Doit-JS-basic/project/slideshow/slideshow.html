@@ -16,6 +16,37 @@
 			<button id="next">&rang;</button>
 		</div>
 	</div>
-	
+<script>
+var ximg = document.querySelectorAll("#container > img");
+console.log(ximg);
+var xprev = document.querySelector("#prev");
+console.log(xprev);
+var xnext = document.querySelector("#next");
+console.log(xnext);
+
+var current = 0;
+showSlide(current);
+prev.onclick = prevSlide;
+next.onclick = nextSlide;
+
+function showSlide(n) {
+	for(var i=0; i < ximg.length; i++) {
+		ximg[i].style.display = "none";
+	}
+	ximg[n].style.display = "block";
+}
+
+function prevSlide() {
+	if (current > 0) current -= 1;
+	else current = ximg.length -1;
+	showSlide(current);
+}
+
+function nextSlide() {
+	if (current < ximg.length -1) current += 1;
+	else current = 0;
+	showSlide(current);
+}
+</script>
 </body>
 </html>
