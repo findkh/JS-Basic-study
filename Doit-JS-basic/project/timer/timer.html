@@ -11,12 +11,53 @@
       <form>
         <label><input type="text" id="startMin">분</label>
         <label><input type="text" id="startSec">초</label>
-        <input type="button" value="START" class="start-btn">
-        <input type="button" value="RESET" class="reset-btn">
+        <input type="button" value="START" class="start-btn" onclick="startTimer()">
+        <input type="button" value="RESET" class="reset-btn" onclick="resetTimer()">
       </form>   
       <hr>   
       <div id="display" class="remaining">        
       </div>
     </div>
+  <script>
+    var min, sec;
+    var timer;
+
+    function startTimer() {
+      min = document.querySelector("#startMin").value;
+      if (min == "") min = 0;
+      sec = document.querySelector("#startSec").value;
+      if (sec == "") sec = 0;
+      timer = setInterval(countTimer, 1000);
+    }
+
+    function countTimer () {
+      if (sec != 0) {
+        sec--;
+        document.querySelector("#display").innerHTML = min + "분" + sec + "초 남았습니다";
+      }
+      else {
+        if (min != 0) {
+          min --;
+          sec = 59;
+        }
+        else {
+          clearTimer(timer);
+          document.querySelector("#display").innerText = "타이머 종료";
+        }
+      }
+    }
+
+		function resetTimer() {
+			clearTimer(timer);  			
+		}
+
+    function clearTimer(t){
+      clearInterval(t);
+      document.getElementById("display").innerHTML = "";
+      document.querySelector("#startMin").value = "";
+      document.querySelector("#startSec").value = "";
+    }
+
+  </script>
   </body>
 </html>

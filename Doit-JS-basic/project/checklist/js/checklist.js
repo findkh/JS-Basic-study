@@ -1,7 +1,14 @@
 var itemList = [];
-		
 var addBtn = document.querySelector("#add");
 addBtn.addEventListener("click", addList); // addBtn.onclick = addList; 라고 해도 됨
+
+getItems();
+
+function getItems() {
+  var storedData = localStorage.getItem("storageList");
+  if(storedData != null) itemList = JSON.parse(storedData);
+  showList();
+}
 
 function addList() {
   var item = document.querySelector("#item").value;  // 텍스트 필드 내용 가져옴
@@ -10,6 +17,7 @@ function addList() {
     document.querySelector("#item").value = "";  // id=”item”인 요소의 값을 지움
     document.querySelector("#item").focus();  // 텍스트 필드에 focus( ) 메서드 적용
   }
+  localStorage.setItem("storageList", JSON.stringify(itemList));
   showList();
 }
 
@@ -31,5 +39,6 @@ function showList() {
 function removeList() {
   var id = this.getAttribute("id"); // this(클릭한 삭제 버튼)의 id 값 가져와 id 변수에 저장
   itemList.splice(id, 1);  // itemList 배열에서 인덱스 값이 id인 요소 1개 삭제
+  localStorage.setItem("storageList", JSON.stringify(itemList));
   showList();  // 변경된 itemList 배열을 다시 화면에 표시
 }

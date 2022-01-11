@@ -21,5 +21,25 @@
     <div id="lightbox">
 			<img src="images/tree-1.jpg" alt="" id="lightboxImage">			
     </div>
-  </body>
+  <script>
+  var pics = document.querySelectorAll(".pic");
+  // console.log(pics);
+  var lightbox = document.querySelector("#lightbox");
+  var lightboxImage = document.querySelector("#lightboxImage");
+
+  for (let i = 0; i < pics.length; i++) {
+    pics[i].addEventListener("click", showLightbox);    
+  }
+
+  function showLightbox() {
+    var bigLocation = this.getAttribute("data-src");
+    lightboxImage.setAttribute("src", bigLocation);
+    lightbox.style.display = "block";
+  }
+
+  lightbox.onclick = function() {
+    lightbox.style.display = "none";
+  }
+  </script>
+  </body>  
 </html>
