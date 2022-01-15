@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/nameList.css">
+	<title>노드 리스트</title>
+</head>
+<body>
+	<div id="container">
+			<h1>참석자 명단</h1>
+			<div id="nameList">
+				<p>홍길동 <span class="del">X</span></p>
+				<p>백두산 <span class="del">X</span></p>
+				<p>도레미 <span class="del">X</span></p>
+				<p></p>
+			</div>
+	</div>
+</body>
+<script>
+	var newP = document.querySelectorAll("p")[0];
+	console.log(newP);
+	var newP2 = document.querySelectorAll("p")[1];
+	console.log(newP2);
+
+	//DOM 트리를 활용해 원하는 노드 다루기
+	//자식 노드 확인하기 - hasChildNodes()
+	// 특정 노드에 자식 노드가 있는지를 확인하는 함수이다 자식 노드가 있다면 true, 없다면 false를 반환한다.
+	console.log(newP.hasChildNodes());
+
+	//자식 노드에 접근하기 - childNodes 
+	// childNodes 속성을 사용해서 현재 노드의 자식 노드에 접근할 수 있다.
+	// 이 때 요소 노드뿐만 아니라 태그와 태그 사이의 줄바꿈도 빈 텍스트 노드인 자식 노드로 인식한다.
+
+	var xChildnodes = document.querySelector("#nameList").childNodes;
+	console.log(xChildnodes);
+
+	//요소에만 접근하려면 children 속성을 사용
+	var xChildren = document.querySelector("#nameList");
+	console.log(xChildren);
+
+	//원하는 위치에 노드 삽입하기 - insertBefore()함수
+	//appendChild() 함수는 부모 노드에 자식 노드가 있을 경우 마지막 자식 노드로 추가된지만
+	//insertBefore()함수를 사용하면 부모 노드에 자식 노드를 추가할 때 기준이 되는 노드를 지정하고 그 앞에 자식 노드를 추가할 수 있다.
+
+	var nameList = document.querySelector("#nameList");
+	nameList.insertBefore(nameList.children[2], nameList.children[0])
+	console.log(nameList);
+
+	//특정 노드 삭제하기 - removeChild(자식노드)와 parentNode
+	//노드는 스스로 자신을 삭제할 수 없고,
+	//부모 노드에 접근한 후 부모 노드에서 삭제해야 한다.
+	//그래서 parentNode로 부모 노드에 접근 하고 removeChild를 사용해서 삭제 한다.
+
+	var xParentNode = document.querySelectorAll(".del")[0].parentNode;
+	console.log(xParentNode);
+	var xParentNode2 = document.querySelectorAll(".del")[1].parentNode;
+	console.log(xParentNode2);
+
+	var firstDel = document.querySelectorAll(".del")[2];
+	var firstP = document.querySelectorAll("p")[2];
+	firstP.removeChild(firstDel);
+</script>
+</html>
